@@ -18,10 +18,7 @@
   "side_panel": {
     "default_path": "sidepanel.html"
   },
-  "web_accessible_resources": [
-    {
-      "resources": ["minecraft.mp4"],
-      "matches": ["<all_urls>"]
-    }
-  ]
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;"
+  }
 }

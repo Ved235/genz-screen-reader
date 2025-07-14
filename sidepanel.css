@@ -1,4 +1,10 @@
-/* Container fills the panel */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 #sr-container {
   position: relative;
   width: 100%;
@@ -9,22 +15,21 @@
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 2rem;
+  box-sizing: border-box; 
 }
 
-/* Looping Minecraft clip behind text */
 #bg-video {
   position: absolute;
   top: 0; 
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.8; /* Increased opacity temporarily to see if video loads */
+  opacity: 0.8;
   z-index: 1;
-  background: #333; /* Fallback background to see if element exists */
+  border: none;
+  pointer-events: none;
 }
 
-/* Overlayed speech text */
 #sr-text {
   position: relative;
   z-index: 2;
@@ -41,9 +46,9 @@
   text-align: center;
   opacity: 0.9;
   transition: opacity 0.3s ease;
+  margin: 0;
 }
 
-/* Flash effect on new text */
 #sr-text.flash {
   opacity: 1;
 }
