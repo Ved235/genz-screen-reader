@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "GenZ Screen Reader",
+  "version": "1.0",
+  "description": "A screen reader extension designed for Gen Z users, providing brainrot narration of web content.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Screen Reader Panel"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["minecraft.mp4"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
