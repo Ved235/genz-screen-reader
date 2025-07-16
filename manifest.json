@@ -3,11 +3,25 @@
   "name": "GenZ Screen Reader",
   "version": "1.0",
   "description": "A screen reader extension designed for Gen Z users, providing brainrot narration of web content.",
+  "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
   "permissions": [
     "activeTab",
     "scripting",
     "storage",
-    "sidePanel"
+    "sidePanel",
+    "tts"
   ],
   "background": {
     "service_worker": "background.js"
